@@ -1,0 +1,144 @@
+{
+	"info": {
+		"_postman_id": "835e6d2c-86b8-4eed-a0d9-ae3496460c06",
+		"name": "Desafio AcidLabs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5438384"
+	},
+	"item": [
+		{
+			"name": "Healthcheck CURL Doctors",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/doctor",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"doctor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"rut\": 196322884,\n    \"nombre\": \"Joel\",\n    \"apellido_paterno\": \"Zúñiga\",\n    \"apellido_materno\": \"Moncada\",\n    \"especialidad\": \"oftalmologia\",\n    \"lugar_de_trabajo\": \"Ioares\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/doctor/create-new-doctor",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"doctor",
+						"create-new-doctor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FIND ONE",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/doctor/find-doctor/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"doctor",
+						"find-doctor",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "FIND ALL",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/doctor/find-doctors",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"doctor",
+						"find-doctors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"rut\": 196322884,\n    \"nombre\": \"Joel\",\n    \"apellido_paterno\": \"Zúñiga\",\n    \"apellido_materno\": \"Moncada\",\n    \"especialidad\": \"pediatria\",\n    \"lugar_de_trabajo\": \"Hospital el Pino\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/doctor/update-doctor/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"doctor",
+						"update-doctor",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/doctor/delete-doctor/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"doctor",
+						"delete-doctor",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
