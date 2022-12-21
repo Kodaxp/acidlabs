@@ -14,7 +14,7 @@ export class DoctorService {
     return 'health doctor';
   }
 
-  async create(doctor: any) {
+  async create(doctor: DoctorEntity) {
     await this.doctorRepository.insert(doctor);
     return { create: 'success', doctor };
   }
@@ -27,7 +27,7 @@ export class DoctorService {
     return await this.doctorRepository.find();
   }
 
-  async update(id: number, doctor: any) {
+  async update(id: number, doctor: DoctorEntity) {
     await this.doctorRepository.update(id, doctor);
     return {
       update: 'success',
